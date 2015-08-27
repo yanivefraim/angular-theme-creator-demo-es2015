@@ -1,18 +1,18 @@
-<div class="left-sidebar">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Edit your Theme</h3>
-    </div>
-    <div class="panel-body">
-      <theme-editor-panel-component on-font-size-change="ctrl.onFontSizeChange(fontSize)" on-font-color-change="ctrl.onFontColorChange(fontColor)" on-font-family-change="ctrl.onFontFamilyChange(fontFamily)" font-size="{{ctrl.fontSize}}" font-family="{{ctrl.fontFamily}}" font-color="{{ctrl.fontColor}}"></theme-editor-panel-component>
-    </div>
+<div class="control-group">
+  <label class="control-label">Font Family</label>
+  <div class="controls">
+    <font-family-component font-family="{{ctrl.fontFamily}}" font-family-changed="ctrl.onFontFamilyChangeEvent(fontFamily)"></font-family-component>
   </div>
 </div>
-<div class="main panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Preview</h3>
+<div class="control-group">
+  <label class="control-label" for="fontColor">Font Color</label>
+  <div class="controls">
+    <font-color-component font-color="{{ctrl.fontColor}}" font-color-changed="ctrl.onFontColorChangeEvent(fontColor)"></font-color-component>
   </div>
-  <div class="panel-body">
-    <theme-preview-panel-component font-size="{{ctrl.fontSize}}" font-family="{{ctrl.fontFamily}}" font-color="{{ctrl.fontColor}}"></theme-preview-panel-component>
+</div>
+<div class="control-group">
+  <label class="control-label" for="fontSize">Font Size</label>
+  <div class="controls">
+    <font-size-component font-size="{{ctrl.fontSize}}" font-size-changed="ctrl.onFontSizeChangeEvent(fontSize)"></font-size-component>
   </div>
 </div>

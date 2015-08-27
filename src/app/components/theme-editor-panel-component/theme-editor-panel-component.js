@@ -1,6 +1,8 @@
 import angular from 'angular';
 import template from './theme-editor-panel-component.tpl';
-import fontSizeComponent from '../font-color-component/font-color-component';
+import fontColorComponent from '../font-color-component/font-color-component';
+import fontSizeComponent from '../font-size-component/font-size-component';
+import fontFamilyComponent from '../font-family-component/font-family-component';
 
 class ThemeEditorPanelComponent {
   /* @ngInject */
@@ -20,7 +22,7 @@ class ThemeEditorPanelComponent {
 }
 
 export default angular
-  .module('themeEditorPanelComponentModule', [template.name, 'themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule', 'themeCreatorFontFamilyComponentModule'])
+.module('themeEditorPanelComponentModule', [template.name, fontColorComponent.name, fontSizeComponent.name, fontFamilyComponent.name])
   .directive('themeEditorPanelComponent', function() {
     return {
       templateUrl: template.name,

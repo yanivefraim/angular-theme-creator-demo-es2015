@@ -1,6 +1,6 @@
 import angular from 'angular';
 import template from './theme-creator-component.tpl'
-
+import themeEditor from '../theme-editor-panel-component/theme-editor-panel-component';
 
 class ThemeCreatorComponent {
   /* @ngInject */
@@ -21,7 +21,7 @@ class ThemeCreatorComponent {
 }
 
 export default angular
-  .module('themeCreatorComponentModule', [template.name])
+  .module('themeCreatorComponentModule', [template.name, themeEditor.name])
   .directive('themeCreatorComponent', function() {
     return {
       templateUrl: template.name,
