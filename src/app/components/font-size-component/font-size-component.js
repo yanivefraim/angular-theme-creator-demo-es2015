@@ -1,21 +1,11 @@
 import angular from 'angular';
-import template from './font-size-component.tpl'
-
-class FontSizeComponent {
-  /* @ngInject */
-  constructor() {
-  }
-
-  fontSizeChangedEvent() {
-    this.fontSizeChanged({fontSize: this.fontSize});
-  }
-}
 
 export default angular
-  .module('themeCreatorFontSizeComponentModule', [template.name])
+  .module('themeCreatorFontSizeComponentModule', [])
   .directive('fontSizeComponent', function() {
     return {
-      templateUrl: template.name,
+      template: `<input id="fontSize" class="form-control" name="fontSize" ng-model="ctrl.fontSize" ng-change="ctrl.modelChanged()"/>
+`,
       scope: {
         fontSize: "@",
         fontSizeChanged: "&"
@@ -25,3 +15,14 @@ export default angular
       controller: FontSizeComponent
     };
   });
+
+class FontSizeComponent {
+  /* @ngInject */
+  constructor() {
+  }
+
+  modelChanged() {
+    this.fontSizeChanged({fontSize: this.fontSize});
+  }
+}
+

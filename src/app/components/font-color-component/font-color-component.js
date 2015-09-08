@@ -6,7 +6,7 @@ class FontColorComponent {
   constructor() {
   }
 
-  fontColorChangedEvent() {
+  modelChanged() {
     this.fontColorChanged({fontColor: this.fontColor});
   }
 }

@@ -7,7 +7,8 @@ class FontFamilyComponent {
     this.fonts = ['Helvetica','Ariel', 'fantasy','cursive'];
   }
 
-  fontFamilyChangedEvent() {
+  modelChanged() {
+    debugger;
     this.fontFamilyChanged({fontFamily: this.fontFamily});
   }
 }
